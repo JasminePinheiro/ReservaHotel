@@ -1,0 +1,286 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+/* menu */
+nav {
+    background-color: #fff;
+    border-bottom: 1px solid #d0d0d0;
+    height: 80px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+label.logo {
+    align-items: center;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+label.logo img {
+    height: 60px;
+    width: auto;
+}
+
+nav ul {
+    float: right;
+    margin-right: 50px;
+    text-decoration: none;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+nav ul li a {
+    color: rgb(78, 78, 78);
+    font-size: 15px;
+    padding: 5px 11px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+nav a.active,
+nav a:hover {
+    background-color: #FE947F;
+    transition: .5s;
+    color: white;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media(max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(163, 159, 159);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        line-height: 30px;
+    }
+
+    nav ul li {
+        display: block;
+
+
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        color: white;
+    }
+
+    nav a:hover,
+    nav a.active {
+        background-color: none;
+        color: white;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    color: #FE937F;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* formulario*/
+.form {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #FE937F;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #e06961;
+}
+
+.form h1 {
+    font-size: 2rem;
+}
+
+/* footer */
+footer {
+    margin-top: 5rem;
+    position: relative;
+    bottom: 0;
+}
+
+footer #myForm {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+}
+
+footer #myForm .text {
+    color: #fff;
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+}
+
+footer #myForm .input-nome {
+    width: 100%;
+    height: auto;
+}
+
+footer #myForm .input-nome input {
+    padding: 0.50rem;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+footer #myForm .input-email {
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+footer #myForm .input-email input {
+    padding: 0.50rem;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+
+footer #myForm .input-btn {
+    width: 100%;
+    height: auto;
+}
+
+footer #myForm .input-btn input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #FE937F;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.50rem;
+    transition: all 0.3s ease-in-out;
+}
+
+footer #myForm .input-btn input:hover {
+    background: #f47761;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.288);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.span-required-footer {
+    display: none;
+    margin: 3px 0 0 1px;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+footer .container .icones {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+
+footer .container .icones img {
+    margin-right: 10px;
+}
+
+.fluid {
+    height: auto;
+    width: 100%;
+    background: blueviolet;
+}
